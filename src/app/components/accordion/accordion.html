@@ -1,0 +1,20 @@
+<uib-accordion>
+    <uib-accordion-group
+            ng-repeat="item in news track by $index"
+            is-open="item.isOpen"
+            ng-click="updateOpenStatus()">
+
+        <uib-accordion-heading>
+            {{item.webTitle}}
+            <i class="pull-right glyphicon"
+               ng-class="{'fa fa-chevron-down': item.isOpen, 'fa fa-chevron-right': !item.isOpen}"
+               ng-click="getInfo($index, item.id)"></i>
+        </uib-accordion-heading>
+
+        {{bodyText}}
+        <a href={{item.webUrl}}> read more..</a>
+    </uib-accordion-group>
+
+</uib-accordion>
+
+

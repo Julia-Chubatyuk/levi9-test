@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="app" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Guardian news</title>
+    <link rel="stylesheet" href="build/vendor.css"/>
+    <link rel="stylesheet" href="build/styles.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+</head>
+
+<body ng-controller="appController" ng-init="load()">
+    <header class="header-main">The Guardian News</header>
+    <div class="button-wrapper">
+        <button class="refresh-button" ng-click="getNews()">Refresh</button>
+    </div>
+    <div class="accordion-wrapper">
+        <accordion news="news"></accordion>
+    </div>
+    <div class="pagination-wrapper">
+        <pagination current="current"
+                    total="max"
+                    onclick-fn="goToNextPage(arrow)">
+        </pagination>
+    </div>
+</body>
+<script src="build/vendor.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-animate.js"></script>
+<script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.3.2.js"></script>
+<script src="build/custom.js"></script>
+
+</html>

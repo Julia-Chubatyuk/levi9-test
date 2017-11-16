@@ -1,0 +1,10 @@
+<div class="pagination-inner">
+
+    <button ng-click="onclickFn({arrow:'prev'})"
+            ng-disabled="checkDisabled('prev')"> &#8810; Previous Page</button>
+
+    <div class="pages">{{current}} of {{total}}</div>
+
+    <button ng-click="onclickFn({arrow:'next'})"
+            ng-disabled="checkDisabled('next')"> Next Page &#8811;</button>
+</div>
